@@ -13,7 +13,7 @@ print(client.get_me().stringify())
 
 @client.on(events.NewMessage(chats='infolokerdrg2020'))
 async def my_event_handler(event):
-    pesan = event.raw_text
+    pesan = event.raw_text.lower()
     print(event.raw_text)
     print(type(event.raw_text))
     if "jakarta timur" in pesan:
